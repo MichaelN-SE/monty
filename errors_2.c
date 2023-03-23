@@ -1,4 +1,4 @@
-OOB#include "monty.h"
+#include "monty.h"
 
 int short_stack_error(unsigned int line_number, char *op);
 int div_error(unsigned int line_number);
@@ -50,7 +50,7 @@ int short_stack_error(unsigned int line_number, char *op)
  *
  * Return: (EXIT_FAILURE) always.
  */
-intOOB div_error(unsigned int line_number)
+int div_error(unsigned int line_number)
 {
 	fprintf(stderr, "L%u: division by zero\n", line_number);
 	return (EXIT_FAILURE);
@@ -59,7 +59,6 @@ intOOB div_error(unsigned int line_number)
 /**
  * pchar_error - Prints pchar error messages for empty stacks
  *               empty stacks and non-character values.
- * OA
  * @line_number: Line number in Monty bytecodes file where error occurred.
  * @message: The corresponding error message to print.
  *
